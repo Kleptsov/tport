@@ -6,3 +6,13 @@ Class {
 	],
 	#category : #'TPort-Methods'
 }
+
+{ #category : #accessing }
+TPGetFile >> file_id [
+	^ file_id
+]
+
+{ #category : #accessing }
+TPGetFile >> file_id: anObject [
+	file_id := anObject
+]

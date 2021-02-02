@@ -7,3 +7,23 @@ Class {
 	],
 	#category : #'TPort-Types'
 }
+
+{ #category : #accessing }
+TPForceReply >> force_reply [
+	^ force_reply
+]
+
+{ #category : #accessing }
+TPForceReply >> force_reply: anObject [
+	force_reply := anObject
+]
+
+{ #category : #accessing }
+TPForceReply >> selective [
+	^ selective
+]
+
+{ #category : #accessing }
+TPForceReply >> selective: anObject [
+	selective := anObject
+]

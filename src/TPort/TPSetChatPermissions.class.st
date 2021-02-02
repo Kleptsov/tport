@@ -7,3 +7,23 @@ Class {
 	],
 	#category : #'TPort-Methods'
 }
+
+{ #category : #accessing }
+TPSetChatPermissions >> chat_id [
+	^ chat_id
+]
+
+{ #category : #accessing }
+TPSetChatPermissions >> chat_id: anObject [
+	chat_id := anObject
+]
+
+{ #category : #accessing }
+TPSetChatPermissions >> permissions [
+	^ permissions
+]
+
+{ #category : #accessing }
+TPSetChatPermissions >> permissions: anObject [
+	permissions := anObject
+]

@@ -69,7 +69,7 @@ TPMessage >> animation [
 
 { #category : #accessing }
 TPMessage >> animation: anObject [
-	animation := anObject
+	animation := TPAnimation parse: anObject
 ]
 
 { #category : #accessing }
@@ -79,7 +79,7 @@ TPMessage >> audio [
 
 { #category : #accessing }
 TPMessage >> audio: anObject [
-	audio := anObject
+	audio := TPAudio parse: anObject
 ]
 
 { #category : #accessing }
@@ -109,7 +109,8 @@ TPMessage >> caption_entities [
 
 { #category : #accessing }
 TPMessage >> caption_entities: anObject [
-	caption_entities := anObject
+	caption_entities := anObject collect: [ :msgEnt|
+		TPMessageEntity parse: msgEnt ]
 ]
 
 { #category : #accessing }
@@ -129,7 +130,7 @@ TPMessage >> chat [
 
 { #category : #accessing }
 TPMessage >> chat: anObject [
-	chat := anObject
+	chat := TPChat parse: anObject
 ]
 
 { #category : #accessing }
@@ -149,7 +150,7 @@ TPMessage >> contact [
 
 { #category : #accessing }
 TPMessage >> contact: anObject [
-	contact := anObject
+	contact := TPContact parse: anObject
 ]
 
 { #category : #accessing }
@@ -179,7 +180,7 @@ TPMessage >> dice [
 
 { #category : #accessing }
 TPMessage >> dice: anObject [
-	dice := anObject
+	dice := TPDice parse: anObject
 ]
 
 { #category : #accessing }
@@ -189,7 +190,7 @@ TPMessage >> document [
 
 { #category : #accessing }
 TPMessage >> document: anObject [
-	document := anObject
+	document := TPDocument parse: anObject
 ]
 
 { #category : #accessing }
@@ -209,7 +210,8 @@ TPMessage >> entities [
 
 { #category : #accessing }
 TPMessage >> entities: anObject [
-	entities := anObject
+	entities := anObject collect: [ :msgEnt|
+		TPMessageEntity parse: msgEnt ]
 ]
 
 { #category : #accessing }
@@ -229,7 +231,7 @@ TPMessage >> forward_from [
 
 { #category : #accessing }
 TPMessage >> forward_from: anObject [
-	forward_from := anObject
+	forward_from := TPUser parse: anObject
 ]
 
 { #category : #accessing }
@@ -239,7 +241,7 @@ TPMessage >> forward_from_chat [
 
 { #category : #accessing }
 TPMessage >> forward_from_chat: anObject [
-	forward_from_chat := anObject
+	forward_from_chat := TPChat parse: anObject
 ]
 
 { #category : #accessing }
@@ -289,7 +291,7 @@ TPMessage >> game [
 
 { #category : #accessing }
 TPMessage >> game: anObject [
-	game := anObject
+	game := TPGame parse: anObject
 ]
 
 { #category : #accessing }
@@ -309,7 +311,7 @@ TPMessage >> invoice [
 
 { #category : #accessing }
 TPMessage >> invoice: anObject [
-	invoice := anObject
+	invoice := TPInvoice parse: anObject
 ]
 
 { #category : #accessing }
@@ -319,7 +321,7 @@ TPMessage >> left_chat_member [
 
 { #category : #accessing }
 TPMessage >> left_chat_member: anObject [
-	left_chat_member := anObject
+	left_chat_member := TPUser parse: anObject
 ]
 
 { #category : #accessing }
@@ -329,7 +331,7 @@ TPMessage >> location [
 
 { #category : #accessing }
 TPMessage >> location: anObject [
-	location := anObject
+	location := TPLocation parse: anObject
 ]
 
 { #category : #accessing }
@@ -379,7 +381,8 @@ TPMessage >> new_chat_members [
 
 { #category : #accessing }
 TPMessage >> new_chat_members: anObject [
-	new_chat_members := anObject
+	new_chat_members := anObject collect: [ :usr|
+		TPUser parse: usr ]
 ]
 
 { #category : #accessing }
@@ -389,7 +392,8 @@ TPMessage >> new_chat_photo [
 
 { #category : #accessing }
 TPMessage >> new_chat_photo: anObject [
-	new_chat_photo := anObject
+	new_chat_photo := anObject collect: [ :photosize|
+		TPPhotoSize parse: photosize ]
 ]
 
 { #category : #accessing }
@@ -419,7 +423,8 @@ TPMessage >> photo [
 
 { #category : #accessing }
 TPMessage >> photo: anObject [
-	photo := anObject
+	photo := anObject collect: [ :arrPht|
+		TPPhotoSize parse: arrPht ]
 ]
 
 { #category : #accessing }
@@ -429,7 +434,7 @@ TPMessage >> pinned_message [
 
 { #category : #accessing }
 TPMessage >> pinned_message: anObject [
-	pinned_message := anObject
+	pinned_message := TPMessage parse: anObject
 ]
 
 { #category : #accessing }
@@ -439,7 +444,7 @@ TPMessage >> poll [
 
 { #category : #accessing }
 TPMessage >> poll: anObject [
-	poll := anObject
+	poll := TPPoll parse: anObject
 ]
 
 { #category : #accessing }
@@ -449,7 +454,7 @@ TPMessage >> proximity_alert_triggered [
 
 { #category : #accessing }
 TPMessage >> proximity_alert_triggered: anObject [
-	proximity_alert_triggered := anObject
+	proximity_alert_triggered := TPProximityAlertTriggered parse: anObject
 ]
 
 { #category : #accessing }
@@ -469,7 +474,7 @@ TPMessage >> reply_to_message [
 
 { #category : #accessing }
 TPMessage >> reply_to_message: anObject [
-	reply_to_message := anObject
+	reply_to_message := TPMessage parse: anObject
 ]
 
 { #category : #accessing }
@@ -479,7 +484,7 @@ TPMessage >> sender_chat [
 
 { #category : #accessing }
 TPMessage >> sender_chat: anObject [
-	sender_chat := anObject
+	sender_chat := TPChat parse: anObject
 ]
 
 { #category : #accessing }
@@ -489,7 +494,7 @@ TPMessage >> sticker [
 
 { #category : #accessing }
 TPMessage >> sticker: anObject [
-	sticker := anObject
+	sticker := TPSticker parse: anObject
 ]
 
 { #category : #accessing }
@@ -499,7 +504,7 @@ TPMessage >> successful_payment [
 
 { #category : #accessing }
 TPMessage >> successful_payment: anObject [
-	successful_payment := anObject
+	successful_payment := TPSuccessfulPayment parse: anObject
 ]
 
 { #category : #accessing }
@@ -529,7 +534,7 @@ TPMessage >> venue [
 
 { #category : #accessing }
 TPMessage >> venue: anObject [
-	venue := anObject
+	venue := TPVenue parse: anObject
 ]
 
 { #category : #accessing }
@@ -539,7 +544,7 @@ TPMessage >> via_bot [
 
 { #category : #accessing }
 TPMessage >> via_bot: anObject [
-	via_bot := anObject
+	via_bot := TPUser parse: anObject
 ]
 
 { #category : #accessing }
@@ -549,7 +554,7 @@ TPMessage >> video [
 
 { #category : #accessing }
 TPMessage >> video: anObject [
-	video := anObject
+	video := TPVideo parse: anObject
 ]
 
 { #category : #accessing }
@@ -559,7 +564,7 @@ TPMessage >> video_note [
 
 { #category : #accessing }
 TPMessage >> video_note: anObject [
-	video_note := anObject
+	video_note := TPVideoNote parse: anObject
 ]
 
 { #category : #accessing }
@@ -569,5 +574,5 @@ TPMessage >> voice [
 
 { #category : #accessing }
 TPMessage >> voice: anObject [
-	voice := anObject
+	voice := TPVoice parse: anObject
 ]

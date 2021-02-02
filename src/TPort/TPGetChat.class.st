@@ -6,3 +6,13 @@ Class {
 	],
 	#category : #'TPort-Methods'
 }
+
+{ #category : #accessing }
+TPGetChat >> chat_id [
+	^ chat_id
+]
+
+{ #category : #accessing }
+TPGetChat >> chat_id: anObject [
+	chat_id := anObject
+]

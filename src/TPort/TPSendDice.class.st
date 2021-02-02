@@ -11,3 +11,63 @@ Class {
 	],
 	#category : #'TPort-Methods'
 }
+
+{ #category : #accessing }
+TPSendDice >> allow_sending_without_reply [
+	^ allow_sending_without_reply
+]
+
+{ #category : #accessing }
+TPSendDice >> allow_sending_without_reply: anObject [
+	allow_sending_without_reply := anObject
+]
+
+{ #category : #accessing }
+TPSendDice >> chat_id [
+	^ chat_id
+]
+
+{ #category : #accessing }
+TPSendDice >> chat_id: anObject [
+	chat_id := anObject
+]
+
+{ #category : #accessing }
+TPSendDice >> disable_notification [
+	^ disable_notification
+]
+
+{ #category : #accessing }
+TPSendDice >> disable_notification: anObject [
+	disable_notification := anObject
+]
+
+{ #category : #accessing }
+TPSendDice >> emoji [
+	^ emoji
+]
+
+{ #category : #accessing }
+TPSendDice >> emoji: anObject [
+	emoji := anObject
+]
+
+{ #category : #accessing }
+TPSendDice >> reply_markup [
+	^ reply_markup
+]
+
+{ #category : #accessing }
+TPSendDice >> reply_markup: anObject [
+	reply_markup := anObject
+]
+
+{ #category : #accessing }
+TPSendDice >> reply_to_message_id [
+	^ reply_to_message_id
+]
+
+{ #category : #accessing }
+TPSendDice >> reply_to_message_id: anObject [
+	reply_to_message_id := anObject
+]

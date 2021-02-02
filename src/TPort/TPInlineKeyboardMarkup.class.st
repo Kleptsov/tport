@@ -6,3 +6,13 @@ Class {
 	],
 	#category : #'TPort-Types'
 }
+
+{ #category : #accessing }
+TPInlineKeyboardMarkup >> inline_kayboard [
+	^ inline_kayboard
+]
+
+{ #category : #accessing }
+TPInlineKeyboardMarkup >> inline_kayboard: anObject [
+	inline_kayboard := anObject
+]

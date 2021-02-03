@@ -66,6 +66,11 @@ TPSendMessage >> entities: anObject [
 ]
 
 { #category : #accessing }
+TPSendMessage >> method [
+	^ 'sendMessage'
+]
+
+{ #category : #accessing }
 TPSendMessage >> parse_mode [
 	^ parse_mode
 ]

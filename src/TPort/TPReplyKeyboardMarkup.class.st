@@ -10,6 +10,16 @@ Class {
 	#category : #'TPort-Types'
 }
 
+{ #category : #converting }
+TPReplyKeyboardMarkup >> asJsonStructure [
+	| d |
+	d := super asJsonStructure.
+	self keyboard ifNotNil: [ :rm|
+	d 	at: 'keyboard'
+		put: (rm collect: [ :el| el collect: [ :el2| el2 asJsonStructure ] ]) ].
+	^ d.
+]
+
 { #category : #accessing }
 TPReplyKeyboardMarkup >> keyboard [
 	^ keyboard

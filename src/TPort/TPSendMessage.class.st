@@ -25,6 +25,16 @@ TPSendMessage >> allow_sending_without_reply: anObject [
 	allow_sending_without_reply := anObject
 ]
 
+{ #category : #converting }
+TPSendMessage >> asJsonStructure [
+	^ super asJsonStructure
+"	| d |
+	d := super asJsonStructure.
+	self reply_markup ifNotNil: [ :rm|
+	d 	at: #reply_markup
+		put: (rm collect: [ :el| el collect: [ :el2| el2 asJsonStructure ] ]) ]."
+]
+
 { #category : #accessing }
 TPSendMessage >> chat_id [
 	^ chat_id

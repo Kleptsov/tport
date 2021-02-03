@@ -30,9 +30,10 @@ TPMethod >> parse: aMessage [
 
 { #category : #accessing }
 TPMethod >> parts [
-	| p |
+	| p v2 |
 	p := OrderedCollection new.
 	self asJsonStructure keysAndValuesDo: [ :k :v|
-		p add: (ZnMimePart fieldName: k value: v) ].
+		v2 := v isString ifTrue: [ v ] ifFalse: [ STON toJsonString: v ].
+		p add: (ZnMimePart fieldName: k value: v2) ].
 	^ p	
 ]

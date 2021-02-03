@@ -4,7 +4,8 @@ Class {
 	#instVars : [
 		'ok',
 		'description',
-		'result'
+		'result',
+		'error_code'
 	],
 	#category : #'TPort-Bot'
 }
@@ -22,6 +23,16 @@ TPResponse >> description [
 { #category : #accessing }
 TPResponse >> description: anObject [
 	description := anObject
+]
+
+{ #category : #accessing }
+TPResponse >> error_code [
+	^ error_code
+]
+
+{ #category : #accessing }
+TPResponse >> error_code: anObject [
+	error_code := anObject
 ]
 
 { #category : #accessing }

@@ -17,8 +17,8 @@ TPObject >> asJsonStructure [
 	res := self perform: var asSymbol.
 	res ifNotNil: [
 		(res respondsTo: #asJsonStructure)
-			ifTrue: [ d at: var put: res asJsonStructure ]
-			ifFalse: [ d at: var put: res ] ] ].
+			ifTrue: [ d at: var asString put: res asJsonStructure ]
+			ifFalse: [ d at: var asString put: res ] ] ].
 	^ d.
 ]
 

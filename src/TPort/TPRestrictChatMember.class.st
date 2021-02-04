@@ -21,6 +21,11 @@ TPRestrictChatMember >> chat_id: anObject [
 ]
 
 { #category : #accessing }
+TPRestrictChatMember >> method [
+	^ 'restrictChatMember'
+]
+
+{ #category : #accessing }
 TPRestrictChatMember >> permissions [
 	^ permissions
 ]
@@ -28,6 +33,11 @@ TPRestrictChatMember >> permissions [
 { #category : #accessing }
 TPRestrictChatMember >> permissions: anObject [
 	permissions := anObject
+]
+
+{ #category : #accessing }
+TPRestrictChatMember >> responseType [
+	^ TPNotJson
 ]
 
 { #category : #accessing }

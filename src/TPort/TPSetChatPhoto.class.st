@@ -19,6 +19,11 @@ TPSetChatPhoto >> chat_id: anObject [
 ]
 
 { #category : #accessing }
+TPSetChatPhoto >> method [
+	^ 'setChatPhoto'
+]
+
+{ #category : #accessing }
 TPSetChatPhoto >> photo [
 	^ photo
 ]
@@ -26,4 +31,9 @@ TPSetChatPhoto >> photo [
 { #category : #accessing }
 TPSetChatPhoto >> photo: anObject [
 	photo := anObject
+]
+
+{ #category : #accessing }
+TPSetChatPhoto >> responseType [
+	^ TPNotJson
 ]

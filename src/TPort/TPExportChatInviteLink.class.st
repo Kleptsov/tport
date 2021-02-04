@@ -16,3 +16,13 @@ TPExportChatInviteLink >> chat_id [
 TPExportChatInviteLink >> chat_id: anObject [
 	chat_id := anObject
 ]
+
+{ #category : #accessing }
+TPExportChatInviteLink >> method [
+	^ 'exportChatInviteLink'
+]
+
+{ #category : #accessing }
+TPExportChatInviteLink >> responseType [
+	^ TPNotJson
+]

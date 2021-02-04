@@ -75,6 +75,11 @@ TPCopyMessage >> message_id: anObject [
 ]
 
 { #category : #accessing }
+TPCopyMessage >> method [
+	^ 'copyMessage'
+]
+
+{ #category : #accessing }
 TPCopyMessage >> parse_mode [
 	^ parse_mode
 ]
@@ -92,4 +97,9 @@ TPCopyMessage >> reply_to_message_id [
 { #category : #accessing }
 TPCopyMessage >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPCopyMessage >> responseType [
+	^ TPMessageId
 ]

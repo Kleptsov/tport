@@ -41,6 +41,11 @@ TPStopMessageLiveLocation >> message_id: anObject [
 ]
 
 { #category : #accessing }
+TPStopMessageLiveLocation >> method [
+	^ 'stopMessageLiveLocation'
+]
+
+{ #category : #accessing }
 TPStopMessageLiveLocation >> reply_markup [
 	^ reply_markup
 ]
@@ -48,4 +53,9 @@ TPStopMessageLiveLocation >> reply_markup [
 { #category : #accessing }
 TPStopMessageLiveLocation >> reply_markup: anObject [
 	reply_markup := anObject
+]
+
+{ #category : #accessing }
+TPStopMessageLiveLocation >> responseType [
+	^ TPMessage
 ]

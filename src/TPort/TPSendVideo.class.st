@@ -91,6 +91,11 @@ TPSendVideo >> height: anObject [
 ]
 
 { #category : #accessing }
+TPSendVideo >> method [
+	^ 'sendVideo'
+]
+
+{ #category : #accessing }
 TPSendVideo >> parse_mode [
 	^ parse_mode
 ]
@@ -118,6 +123,11 @@ TPSendVideo >> reply_markup [
 { #category : #accessing }
 TPSendVideo >> reply_markup: anObject [
 	reply_markup := anObject
+]
+
+{ #category : #accessing }
+TPSendVideo >> responseType [
+	^ TPMessage
 ]
 
 { #category : #accessing }

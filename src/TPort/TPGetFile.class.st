@@ -16,3 +16,13 @@ TPGetFile >> file_id [
 TPGetFile >> file_id: anObject [
 	file_id := anObject
 ]
+
+{ #category : #accessing }
+TPGetFile >> method [
+	^ 'getFile'
+]
+
+{ #category : #accessing }
+TPGetFile >> responseType [
+	^ TPFile
+]

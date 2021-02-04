@@ -22,6 +22,11 @@ TPMethod >> asJsonStructure [
 	^ d.
 ]
 
+{ #category : #accessing }
+TPMethod >> method [
+	^ self subclassResponsibility
+]
+
 { #category : #parsing }
 TPMethod >> parse: aMessage [
 	aMessage keysAndValuesDo: [ :k :v|
@@ -36,4 +41,9 @@ TPMethod >> parts [
 		v2 := v isString ifTrue: [ v ] ifFalse: [ STON toJsonString: v ].
 		p add: (ZnMimePart fieldName: k value: v2) ].
 	^ p	
+]
+
+{ #category : #accessing }
+TPMethod >> responseType [
+	^ self subclassResponsibility
 ]

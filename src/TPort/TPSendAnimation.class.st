@@ -100,6 +100,11 @@ TPSendAnimation >> height: anObject [
 ]
 
 { #category : #accessing }
+TPSendAnimation >> method [
+	^ 'sendAnimation'
+]
+
+{ #category : #accessing }
 TPSendAnimation >> parse_mode [
 	^ parse_mode
 ]
@@ -127,6 +132,11 @@ TPSendAnimation >> reply_to_message_id [
 { #category : #accessing }
 TPSendAnimation >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPSendAnimation >> responseType [
+	^ TPMessage
 ]
 
 { #category : #accessing }

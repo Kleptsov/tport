@@ -19,6 +19,11 @@ TPSetChatPermissions >> chat_id: anObject [
 ]
 
 { #category : #accessing }
+TPSetChatPermissions >> method [
+	^ 'setChatPermissions'
+]
+
+{ #category : #accessing }
 TPSetChatPermissions >> permissions [
 	^ permissions
 ]
@@ -26,4 +31,9 @@ TPSetChatPermissions >> permissions [
 { #category : #accessing }
 TPSetChatPermissions >> permissions: anObject [
 	permissions := anObject
+]
+
+{ #category : #accessing }
+TPSetChatPermissions >> responseType [
+	^ TPNotJson
 ]

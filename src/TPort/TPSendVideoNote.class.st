@@ -66,6 +66,11 @@ TPSendVideoNote >> length: anObject [
 ]
 
 { #category : #accessing }
+TPSendVideoNote >> method [
+	^ 'sendVideoNote'
+]
+
+{ #category : #accessing }
 TPSendVideoNote >> replay_markup [
 	^ replay_markup
 ]
@@ -83,6 +88,11 @@ TPSendVideoNote >> reply_to_message_id [
 { #category : #accessing }
 TPSendVideoNote >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPSendVideoNote >> responseType [
+	^ TPMessage
 ]
 
 { #category : #accessing }

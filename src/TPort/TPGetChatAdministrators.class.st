@@ -16,3 +16,13 @@ TPGetChatAdministrators >> chat_id [
 TPGetChatAdministrators >> chat_id: anObject [
 	chat_id := anObject
 ]
+
+{ #category : #accessing }
+TPGetChatAdministrators >> method [
+	^ 'getChatAdministrators'
+]
+
+{ #category : #accessing }
+TPGetChatAdministrators >> responseType [
+	^ TPChatMember
+]

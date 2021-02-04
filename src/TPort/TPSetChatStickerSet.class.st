@@ -19,6 +19,16 @@ TPSetChatStickerSet >> chat_id: anObject [
 ]
 
 { #category : #accessing }
+TPSetChatStickerSet >> method [
+	^ 'setChatStickerSet'
+]
+
+{ #category : #accessing }
+TPSetChatStickerSet >> responseType [
+	^ TPNotJson
+]
+
+{ #category : #accessing }
 TPSetChatStickerSet >> sticker_set_name [
 	^ sticker_set_name
 ]

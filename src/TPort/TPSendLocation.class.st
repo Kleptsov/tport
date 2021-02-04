@@ -98,6 +98,11 @@ TPSendLocation >> longiture: anObject [
 ]
 
 { #category : #accessing }
+TPSendLocation >> method [
+	^ 'sendLocation'
+]
+
+{ #category : #accessing }
 TPSendLocation >> proximity_alert_radius [
 	^ proximity_alert_radius
 ]
@@ -125,4 +130,9 @@ TPSendLocation >> reply_to_message_id [
 { #category : #accessing }
 TPSendLocation >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPSendLocation >> responseType [
+	^ TPMessage
 ]

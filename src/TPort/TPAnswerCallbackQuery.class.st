@@ -32,6 +32,16 @@ TPAnswerCallbackQuery >> callback_query_id: anObject [
 ]
 
 { #category : #accessing }
+TPAnswerCallbackQuery >> method [
+	^ 'answerCallbackQuery'
+]
+
+{ #category : #accessing }
+TPAnswerCallbackQuery >> responseType [
+	^ TPNotJson
+]
+
+{ #category : #accessing }
 TPAnswerCallbackQuery >> show_alert [
 	^ show_alert
 ]

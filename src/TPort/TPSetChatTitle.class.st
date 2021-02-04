@@ -19,6 +19,16 @@ TPSetChatTitle >> chat_id: anObject [
 ]
 
 { #category : #accessing }
+TPSetChatTitle >> method [
+	^ 'setChatTitle'
+]
+
+{ #category : #accessing }
+TPSetChatTitle >> responseType [
+	^ TPNotJson
+]
+
+{ #category : #accessing }
 TPSetChatTitle >> title [
 	^ title
 ]

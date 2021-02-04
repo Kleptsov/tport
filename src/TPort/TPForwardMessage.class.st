@@ -49,3 +49,13 @@ TPForwardMessage >> message_id [
 TPForwardMessage >> message_id: anObject [
 	message_id := anObject
 ]
+
+{ #category : #accessing }
+TPForwardMessage >> method [
+	^ 'forwardMessage'
+]
+
+{ #category : #accessing }
+TPForwardMessage >> responseType [
+	^ TPMessage
+]

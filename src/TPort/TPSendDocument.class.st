@@ -88,6 +88,11 @@ TPSendDocument >> document: anObject [
 ]
 
 { #category : #accessing }
+TPSendDocument >> method [
+	^ 'sendDocument'
+]
+
+{ #category : #accessing }
 TPSendDocument >> parse_mode [
 	^ parse_mode
 ]
@@ -115,6 +120,11 @@ TPSendDocument >> reply_to_message_id [
 { #category : #accessing }
 TPSendDocument >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPSendDocument >> responseType [
+	^ TPMessage
 ]
 
 { #category : #accessing }

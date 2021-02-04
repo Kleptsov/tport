@@ -16,3 +16,13 @@ TPSetMyCommands >> commands [
 TPSetMyCommands >> commands: anObject [
 	commands := anObject
 ]
+
+{ #category : #accessing }
+TPSetMyCommands >> method [
+	^ 'setMyCommands'
+]
+
+{ #category : #accessing }
+TPSetMyCommands >> responseType [
+	^ TPNotJson
+]

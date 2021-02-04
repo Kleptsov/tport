@@ -16,3 +16,13 @@ TPDeleteChatStickerSet >> chat_id [
 TPDeleteChatStickerSet >> chat_id: anObject [
 	chat_id := anObject
 ]
+
+{ #category : #accessing }
+TPDeleteChatStickerSet >> method [
+	^ 'deleteChatStickerSet'
+]
+
+{ #category : #accessing }
+TPDeleteChatStickerSet >> responseType [
+	^ TPNotJson
+]

@@ -27,3 +27,13 @@ TPSetChatDescription >> description [
 TPSetChatDescription >> description: anObject [
 	description := anObject
 ]
+
+{ #category : #accessing }
+TPSetChatDescription >> method [
+	^ 'setChatDescription'
+]
+
+{ #category : #accessing }
+TPSetChatDescription >> responseType [
+	^ TPNotJson
+]

@@ -16,3 +16,13 @@ TPGetChatMembersCount >> chat_id [
 TPGetChatMembersCount >> chat_id: anObject [
 	chat_id := anObject
 ]
+
+{ #category : #accessing }
+TPGetChatMembersCount >> method [
+	^ 'getChatMembersCount'
+]
+
+{ #category : #accessing }
+TPGetChatMembersCount >> responseType [
+	^ Integer
+]

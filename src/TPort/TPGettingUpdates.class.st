@@ -22,6 +22,11 @@ TPGettingUpdates >> asJsonStructure [
 	^ d.
 ]
 
+{ #category : #accessing }
+TPGettingUpdates >> method [
+	self subclassResponsibility
+]
+
 { #category : #parsing }
 TPGettingUpdates >> parse: aMessage [
 	aMessage keysAndValuesDo: [ :k :v|

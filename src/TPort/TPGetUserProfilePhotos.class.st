@@ -20,6 +20,11 @@ TPGetUserProfilePhotos >> limit: anObject [
 ]
 
 { #category : #accessing }
+TPGetUserProfilePhotos >> method [
+	^ 'getUserProfilePhotos'
+]
+
+{ #category : #accessing }
 TPGetUserProfilePhotos >> offset [
 	^ offset
 ]
@@ -27,6 +32,11 @@ TPGetUserProfilePhotos >> offset [
 { #category : #accessing }
 TPGetUserProfilePhotos >> offset: anObject [
 	offset := anObject
+]
+
+{ #category : #accessing }
+TPGetUserProfilePhotos >> responseType [
+	^ TPUserProfilePhotos
 ]
 
 { #category : #accessing }

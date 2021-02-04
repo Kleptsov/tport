@@ -53,6 +53,11 @@ TPSendDice >> emoji: anObject [
 ]
 
 { #category : #accessing }
+TPSendDice >> method [
+	^ 'sendDice'
+]
+
+{ #category : #accessing }
 TPSendDice >> reply_markup [
 	^ reply_markup
 ]
@@ -70,4 +75,9 @@ TPSendDice >> reply_to_message_id [
 { #category : #accessing }
 TPSendDice >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPSendDice >> responseType [
+	^ TPMessage
 ]

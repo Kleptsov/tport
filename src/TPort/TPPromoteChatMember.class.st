@@ -118,6 +118,16 @@ TPPromoteChatMember >> is_anonymous: anObject [
 ]
 
 { #category : #accessing }
+TPPromoteChatMember >> method [
+	^ 'promoteChatMember'
+]
+
+{ #category : #accessing }
+TPPromoteChatMember >> responseType [
+	^ TPNotJson
+]
+
+{ #category : #accessing }
 TPPromoteChatMember >> user_id [
 	^ user_id
 ]

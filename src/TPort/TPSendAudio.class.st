@@ -90,6 +90,11 @@ TPSendAudio >> duration: anObject [
 ]
 
 { #category : #accessing }
+TPSendAudio >> method [
+	^ 'sendAudio'
+]
+
+{ #category : #accessing }
 TPSendAudio >> parse_mode [
 	^ parse_mode
 ]
@@ -127,6 +132,11 @@ TPSendAudio >> reply_to_message_id [
 { #category : #accessing }
 TPSendAudio >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPSendAudio >> responseType [
+	^ TPMessage
 ]
 
 { #category : #accessing }

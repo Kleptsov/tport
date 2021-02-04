@@ -5,7 +5,8 @@ Class {
 		'ok',
 		'description',
 		'result',
-		'error_code'
+		'error_code',
+		'responseType'
 	],
 	#category : #'TPort-Bot'
 }
@@ -52,14 +53,27 @@ TPResponse >> parse: aRespond [
 ]
 
 { #category : #accessing }
+TPResponse >> responseType [
+	^ responseType ifNil: [ responseType := TPGetUpdate ]
+]
+
+{ #category : #accessing }
+TPResponse >> responseType: anObject [
+	responseType := anObject
+]
+
+{ #category : #accessing }
 TPResponse >> result [
 	^ result
 ]
 
 { #category : #accessing }
 TPResponse >> result: anObject [
-	
-	result := anObject collect: [ :m|
-		TPGetUpdate parse: m	
-	]
+	self responseType = TPNotJson
+		ifTrue: [ result := anObject ].
+	anObject isDictionary
+		ifTrue: [ result := self responseType parse: anObject ]
+		ifFalse: [ 
+			result := anObject collect: [ :m|
+				self responseType parse: m	] ]
 ]

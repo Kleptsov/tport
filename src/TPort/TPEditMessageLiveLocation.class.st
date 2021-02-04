@@ -86,6 +86,11 @@ TPEditMessageLiveLocation >> message_id: anObject [
 ]
 
 { #category : #accessing }
+TPEditMessageLiveLocation >> method [
+	^ 'editMessageLiveLocation'
+]
+
+{ #category : #accessing }
 TPEditMessageLiveLocation >> proximity_alert_radius [
 	^ proximity_alert_radius
 ]
@@ -103,4 +108,9 @@ TPEditMessageLiveLocation >> reply_markup [
 { #category : #accessing }
 TPEditMessageLiveLocation >> reply_markup: anObject [
 	reply_markup := anObject
+]
+
+{ #category : #accessing }
+TPEditMessageLiveLocation >> responseType [
+	^ TPMessage
 ]

@@ -52,6 +52,11 @@ TPSendMediaGroup >> media: anObject [
 ]
 
 { #category : #accessing }
+TPSendMediaGroup >> method [
+	^ 'sendMediaGroup'
+]
+
+{ #category : #accessing }
 TPSendMediaGroup >> reply_to_message_id [
 	^ reply_to_message_id
 ]
@@ -59,4 +64,9 @@ TPSendMediaGroup >> reply_to_message_id [
 { #category : #accessing }
 TPSendMediaGroup >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPSendMediaGroup >> responseType [
+	^ TPMessage
 ]

@@ -66,6 +66,11 @@ TPSendContact >> last_name: anObject [
 ]
 
 { #category : #accessing }
+TPSendContact >> method [
+	^ 'sendContact'
+]
+
+{ #category : #accessing }
 TPSendContact >> phone_number [
 	^ phone_number
 ]
@@ -93,6 +98,11 @@ TPSendContact >> reply_to_message_id [
 { #category : #accessing }
 TPSendContact >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPSendContact >> responseType [
+	^ TPMessage
 ]
 
 { #category : #accessing }

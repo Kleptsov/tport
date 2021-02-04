@@ -30,6 +30,16 @@ TPSetChatAdministratorCustomTitle >> custom_title: anObject [
 ]
 
 { #category : #accessing }
+TPSetChatAdministratorCustomTitle >> method [
+	^ 'setChatAdministratorCustomTitle'
+]
+
+{ #category : #accessing }
+TPSetChatAdministratorCustomTitle >> responseType [
+	^ TPNotJson
+]
+
+{ #category : #accessing }
 TPSetChatAdministratorCustomTitle >> user_id [
 	^ user_id
 ]

@@ -111,6 +111,11 @@ TPSendMessage >> reply_to_message_id: anObject [
 ]
 
 { #category : #accessing }
+TPSendMessage >> responseType [
+	^ TPMessage
+]
+
+{ #category : #accessing }
 TPSendMessage >> text [
 	^ text
 ]

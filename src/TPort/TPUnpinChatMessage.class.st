@@ -27,3 +27,13 @@ TPUnpinChatMessage >> message_id [
 TPUnpinChatMessage >> message_id: anObject [
 	message_id := anObject
 ]
+
+{ #category : #accessing }
+TPUnpinChatMessage >> method [
+	^ 'unpinChatMessage'
+]
+
+{ #category : #accessing }
+TPUnpinChatMessage >> responseType [
+	^ TPNotJson
+]

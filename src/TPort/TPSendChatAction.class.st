@@ -27,3 +27,13 @@ TPSendChatAction >> chat_id [
 TPSendChatAction >> chat_id: anObject [
 	chat_id := anObject
 ]
+
+{ #category : #accessing }
+TPSendChatAction >> method [
+	^ 'sendChatAction'
+]
+
+{ #category : #accessing }
+TPSendChatAction >> responseType [
+	^ TPNotJson
+]

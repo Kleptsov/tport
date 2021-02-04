@@ -38,3 +38,13 @@ TPPinChatMessage >> message_id [
 TPPinChatMessage >> message_id: anObject [
 	message_id := anObject
 ]
+
+{ #category : #accessing }
+TPPinChatMessage >> method [
+	^ 'pinChatMessage'
+]
+
+{ #category : #accessing }
+TPPinChatMessage >> responseType [
+	^ TPNotJson
+]

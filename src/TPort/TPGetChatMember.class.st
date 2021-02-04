@@ -19,6 +19,16 @@ TPGetChatMember >> chat_id: anObject [
 ]
 
 { #category : #accessing }
+TPGetChatMember >> method [
+	^ 'getChatMember'
+]
+
+{ #category : #accessing }
+TPGetChatMember >> responseType [
+	^ TPChatMember
+]
+
+{ #category : #accessing }
 TPGetChatMember >> user_id [
 	^ user_id
 ]

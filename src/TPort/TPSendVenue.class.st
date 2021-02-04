@@ -120,6 +120,11 @@ TPSendVenue >> longitude: anObject [
 ]
 
 { #category : #accessing }
+TPSendVenue >> method [
+	^ 'sendVenue'
+]
+
+{ #category : #accessing }
 TPSendVenue >> reply_markup [
 	^ reply_markup
 ]
@@ -137,6 +142,11 @@ TPSendVenue >> reply_to_messege_id [
 { #category : #accessing }
 TPSendVenue >> reply_to_messege_id: anObject [
 	reply_to_messege_id := anObject
+]
+
+{ #category : #accessing }
+TPSendVenue >> responseType [
+	^ TPMessage
 ]
 
 { #category : #accessing }

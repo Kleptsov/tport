@@ -16,3 +16,13 @@ TPGetChat >> chat_id [
 TPGetChat >> chat_id: anObject [
 	chat_id := anObject
 ]
+
+{ #category : #accessing }
+TPGetChat >> method [
+	^ 'getChat'
+]
+
+{ #category : #accessing }
+TPGetChat >> responseType [
+	^ TPChat
+]

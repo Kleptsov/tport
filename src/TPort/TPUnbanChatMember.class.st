@@ -20,6 +20,11 @@ TPUnbanChatMember >> chat_id: anObject [
 ]
 
 { #category : #accessing }
+TPUnbanChatMember >> method [
+	^ 'unbanChatMember'
+]
+
+{ #category : #accessing }
 TPUnbanChatMember >> only_if_banned [
 	^ only_if_banned
 ]
@@ -27,6 +32,11 @@ TPUnbanChatMember >> only_if_banned [
 { #category : #accessing }
 TPUnbanChatMember >> only_if_banned: anObject [
 	only_if_banned := anObject
+]
+
+{ #category : #accessing }
+TPUnbanChatMember >> responseType [
+	^ TPNotJson
 ]
 
 { #category : #accessing }

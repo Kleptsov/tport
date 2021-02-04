@@ -20,6 +20,16 @@ TPKickChatMember >> chat_id: anObject [
 ]
 
 { #category : #accessing }
+TPKickChatMember >> method [
+	^ 'kickChatMember'
+]
+
+{ #category : #accessing }
+TPKickChatMember >> responseType [
+	^ TPNotJson
+]
+
+{ #category : #accessing }
 TPKickChatMember >> until_date [
 	^ until_date
 ]

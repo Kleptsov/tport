@@ -66,6 +66,11 @@ TPGetUpdates >> parts [
 ]
 
 { #category : #accessing }
+TPGetUpdates >> responseType [
+	^ TPGetUpdate
+]
+
+{ #category : #accessing }
 TPGetUpdates >> timeout [
 	^ timeout
 ]

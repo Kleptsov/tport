@@ -77,6 +77,11 @@ TPSendVoice >> duration: anObject [
 ]
 
 { #category : #accessing }
+TPSendVoice >> method [
+	^ 'sendVoice'
+]
+
+{ #category : #accessing }
 TPSendVoice >> parse_mode [
 	^ parse_mode
 ]
@@ -104,6 +109,11 @@ TPSendVoice >> reply_to_message_id [
 { #category : #accessing }
 TPSendVoice >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPSendVoice >> responseType [
+	^ TPMessage
 ]
 
 { #category : #accessing }

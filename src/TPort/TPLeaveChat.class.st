@@ -16,3 +16,13 @@ TPLeaveChat >> chat_id [
 TPLeaveChat >> chat_id: anObject [
 	chat_id := anObject
 ]
+
+{ #category : #accessing }
+TPLeaveChat >> method [
+	^ 'leaveChat'
+]
+
+{ #category : #accessing }
+TPLeaveChat >> responseType [
+	^ TPNotJson
+]

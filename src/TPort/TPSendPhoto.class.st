@@ -66,6 +66,11 @@ TPSendPhoto >> disable_notification: anObject [
 ]
 
 { #category : #accessing }
+TPSendPhoto >> method [
+	^ 'sendPhoto'
+]
+
+{ #category : #accessing }
 TPSendPhoto >> parse_mode [
 	^ parse_mode
 ]
@@ -103,4 +108,9 @@ TPSendPhoto >> reply_to_message_id [
 { #category : #accessing }
 TPSendPhoto >> reply_to_message_id: anObject [
 	reply_to_message_id := anObject
+]
+
+{ #category : #accessing }
+TPSendPhoto >> responseType [
+	^ TPMessage
 ]

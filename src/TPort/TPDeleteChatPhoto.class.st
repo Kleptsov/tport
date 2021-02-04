@@ -16,3 +16,13 @@ TPDeleteChatPhoto >> chat_id [
 TPDeleteChatPhoto >> chat_id: anObject [
 	chat_id := anObject
 ]
+
+{ #category : #accessing }
+TPDeleteChatPhoto >> method [
+	^ 'deleteChatPhoto'
+]
+
+{ #category : #accessing }
+TPDeleteChatPhoto >> responseType [
+	^ TPNotJson
+]

@@ -18,10 +18,21 @@ Class {
 		'sticket_set_name',
 		'can_set_sticker_set',
 		'linked_chat_id',
-		'location'
+		'location',
+		'all_members_are_administrators'
 	],
 	#category : #'TPort-Types'
 }
+
+{ #category : #accessing }
+TPChat >> all_members_are_administrators [
+	^ all_members_are_administrators
+]
+
+{ #category : #accessing }
+TPChat >> all_members_are_administrators: anObject [
+	all_members_are_administrators := TPNotJson parse: anObject
+]
 
 { #category : #accessing }
 TPChat >> bio [

@@ -37,6 +37,7 @@ Class {
 		'venue',
 		'location',
 		'new_chat_members',
+		'new_chat_member',
 		'left_chat_member',
 		'new_chat_title',
 		'new_chat_photo',
@@ -52,7 +53,8 @@ Class {
 		'connected_website',
 		'passport_data',
 		'proximity_alert_triggered',
-		'replay_markup'
+		'replay_markup',
+		'new_chat_participant'
 	],
 	#category : #'TPort-Types'
 }
@@ -375,6 +377,16 @@ TPMessage >> migrate_to_chat_id: anObject [
 ]
 
 { #category : #accessing }
+TPMessage >> new_chat_member [
+	^ new_chat_member
+]
+
+{ #category : #accessing }
+TPMessage >> new_chat_member: anObject [
+	new_chat_member := TPUser parse: anObject
+]
+
+{ #category : #accessing }
 TPMessage >> new_chat_members [
 	^ new_chat_members
 ]
@@ -383,6 +395,16 @@ TPMessage >> new_chat_members [
 TPMessage >> new_chat_members: anObject [
 	new_chat_members := anObject collect: [ :usr|
 		TPUser parse: usr ]
+]
+
+{ #category : #accessing }
+TPMessage >> new_chat_participant [
+	^ new_chat_participant
+]
+
+{ #category : #accessing }
+TPMessage >> new_chat_participant: anObject [
+	new_chat_participant := TPUser parse: anObject
 ]
 
 { #category : #accessing }

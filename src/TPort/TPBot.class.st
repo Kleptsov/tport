@@ -35,7 +35,7 @@ TPBot >> send [
 	client := ZnClient new url: addr.
 	parts do: [ :p| client addPart: p ].
 	r := STON fromString: client post.
-	response := TPResponse new responseType: (self method responseType); parse: r.
+	^ response := TPResponse new responseType: (self method responseType); parse: r.
 ]
 
 { #category : #accessing }

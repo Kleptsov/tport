@@ -1,6 +1,6 @@
 Class {
 	#name : #TPAnswerInlineQuery,
-	#superclass : #TPInlineMode,
+	#superclass : #TPMethod,
 	#instVars : [
 		'inline_query_id',
 		'results',
@@ -44,6 +44,11 @@ TPAnswerInlineQuery >> is_personal: anObject [
 ]
 
 { #category : #accessing }
+TPAnswerInlineQuery >> method [
+	'answerInlineQuery'
+]
+
+{ #category : #accessing }
 TPAnswerInlineQuery >> next_offset [
 	^ next_offset
 ]
@@ -51,6 +56,11 @@ TPAnswerInlineQuery >> next_offset [
 { #category : #accessing }
 TPAnswerInlineQuery >> next_offset: anObject [
 	next_offset := anObject
+]
+
+{ #category : #accessing }
+TPAnswerInlineQuery >> responseType [
+	^ TPNotJson
 ]
 
 { #category : #accessing }

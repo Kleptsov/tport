@@ -53,7 +53,7 @@ Class {
 		'connected_website',
 		'passport_data',
 		'proximity_alert_triggered',
-		'replay_markup',
+		'reply_markup',
 		'new_chat_participant'
 	],
 	#category : #'TPort-Types'
@@ -480,13 +480,13 @@ TPMessage >> proximity_alert_triggered: anObject [
 ]
 
 { #category : #accessing }
-TPMessage >> replay_markup [
-	^ replay_markup
+TPMessage >> reply_markup [
+	^ reply_markup
 ]
 
 { #category : #accessing }
-TPMessage >> replay_markup: anObject [
-	replay_markup := anObject
+TPMessage >> reply_markup: anObject [
+	reply_markup := anObject
 ]
 
 { #category : #accessing }

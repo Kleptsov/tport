@@ -4,7 +4,9 @@ Class {
 	#instVars : [
 		'id',
 		'from',
-		'location'
+		'location',
+		'query',
+		'offset'
 	],
 	#category : #'TPort-InlineMode'
 }
@@ -37,4 +39,24 @@ TPInlineQuery >> location [
 { #category : #accessing }
 TPInlineQuery >> location: anObject [
 	location := TPLocation parse: anObject
+]
+
+{ #category : #accessing }
+TPInlineQuery >> offset [
+	^ offset
+]
+
+{ #category : #accessing }
+TPInlineQuery >> offset: anObject [
+	offset := anObject
+]
+
+{ #category : #accessing }
+TPInlineQuery >> query [
+	^ query
+]
+
+{ #category : #accessing }
+TPInlineQuery >> query: anObject [
+	query := anObject
 ]

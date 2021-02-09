@@ -40,7 +40,7 @@ TPCallbackQuery >> from [
 
 { #category : #accessing }
 TPCallbackQuery >> from: anObject [
-	from := anObject
+	from := TPUser parse: anObject
 ]
 
 { #category : #accessing }
@@ -80,5 +80,5 @@ TPCallbackQuery >> massage [
 
 { #category : #accessing }
 TPCallbackQuery >> massage: anObject [
-	massage := anObject
+	massage := TPUser parse: anObject
 ]

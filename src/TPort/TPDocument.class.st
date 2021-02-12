@@ -39,7 +39,7 @@ TPDocument >> file_size [
 
 { #category : #accessing }
 TPDocument >> file_size: anObject [
-	file_size := anObject
+	file_size := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }

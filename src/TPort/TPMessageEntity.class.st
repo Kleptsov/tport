@@ -19,7 +19,7 @@ TPMessageEntity >> language [
 
 { #category : #accessing }
 TPMessageEntity >> language: anObject [
-	language := anObject
+	language := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -29,7 +29,7 @@ TPMessageEntity >> length [
 
 { #category : #accessing }
 TPMessageEntity >> length: anObject [
-	length := anObject
+	length := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -39,7 +39,7 @@ TPMessageEntity >> offset [
 
 { #category : #accessing }
 TPMessageEntity >> offset: anObject [
-	offset := anObject
+	offset := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -49,7 +49,7 @@ TPMessageEntity >> type [
 
 { #category : #accessing }
 TPMessageEntity >> type: anObject [
-	type := anObject
+	type := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -59,7 +59,7 @@ TPMessageEntity >> url [
 
 { #category : #accessing }
 TPMessageEntity >> url: anObject [
-	url := anObject
+	url := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -69,5 +69,5 @@ TPMessageEntity >> user [
 
 { #category : #accessing }
 TPMessageEntity >> user: anObject [
-	user := anObject
+	user := TPUser parse: anObject
 ]

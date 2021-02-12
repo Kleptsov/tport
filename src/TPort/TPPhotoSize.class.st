@@ -18,7 +18,7 @@ TPPhotoSize >> file_id [
 
 { #category : #accessing }
 TPPhotoSize >> file_id: anObject [
-	file_id := anObject
+	file_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -38,7 +38,7 @@ TPPhotoSize >> file_unique_id [
 
 { #category : #accessing }
 TPPhotoSize >> file_unique_id: anObject [
-	file_unique_id := anObject
+	file_unique_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -48,7 +48,7 @@ TPPhotoSize >> height [
 
 { #category : #accessing }
 TPPhotoSize >> height: anObject [
-	height := anObject
+	height := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -58,5 +58,5 @@ TPPhotoSize >> width [
 
 { #category : #accessing }
 TPPhotoSize >> width: anObject [
-	width := anObject
+	width := (TPNotJson parse: anObject) asInteger
 ]

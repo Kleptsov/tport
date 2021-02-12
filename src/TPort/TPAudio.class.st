@@ -22,7 +22,7 @@ TPAudio >> duration [
 
 { #category : #accessing }
 TPAudio >> duration: anObject [
-	duration := anObject
+	duration := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -32,7 +32,7 @@ TPAudio >> file_id [
 
 { #category : #accessing }
 TPAudio >> file_id: anObject [
-	file_id := anObject
+	file_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -42,7 +42,7 @@ TPAudio >> file_name [
 
 { #category : #accessing }
 TPAudio >> file_name: anObject [
-	file_name := anObject
+	file_name := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -52,7 +52,7 @@ TPAudio >> file_size [
 
 { #category : #accessing }
 TPAudio >> file_size: anObject [
-	file_size := anObject
+	file_size := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -62,7 +62,7 @@ TPAudio >> file_unique_id [
 
 { #category : #accessing }
 TPAudio >> file_unique_id: anObject [
-	file_unique_id := anObject
+	file_unique_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -72,7 +72,7 @@ TPAudio >> mime_type [
 
 { #category : #accessing }
 TPAudio >> mime_type: anObject [
-	mime_type := anObject
+	mime_type := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -82,7 +82,7 @@ TPAudio >> performer [
 
 { #category : #accessing }
 TPAudio >> performer: anObject [
-	performer := anObject
+	performer := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -92,7 +92,7 @@ TPAudio >> thumb [
 
 { #category : #accessing }
 TPAudio >> thumb: anObject [
-	thumb := anObject
+	thumb := TPPhotoSize parse: anObject
 ]
 
 { #category : #accessing }
@@ -102,5 +102,5 @@ TPAudio >> title [
 
 { #category : #accessing }
 TPAudio >> title: anObject [
-	title := anObject
+	title := (TPNotJson parse: anObject) asString
 ]

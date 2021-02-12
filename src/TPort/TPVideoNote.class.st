@@ -19,7 +19,7 @@ TPVideoNote >> duration [
 
 { #category : #accessing }
 TPVideoNote >> duration: anObject [
-	duration := anObject
+	duration := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -29,7 +29,7 @@ TPVideoNote >> file_id [
 
 { #category : #accessing }
 TPVideoNote >> file_id: anObject [
-	file_id := anObject
+	file_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -39,7 +39,7 @@ TPVideoNote >> file_size [
 
 { #category : #accessing }
 TPVideoNote >> file_size: anObject [
-	file_size := anObject
+	file_size := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -49,7 +49,7 @@ TPVideoNote >> file_unique_id [
 
 { #category : #accessing }
 TPVideoNote >> file_unique_id: anObject [
-	file_unique_id := anObject
+	file_unique_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -59,7 +59,7 @@ TPVideoNote >> length [
 
 { #category : #accessing }
 TPVideoNote >> length: anObject [
-	length := anObject
+	length := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -69,5 +69,5 @@ TPVideoNote >> thumb [
 
 { #category : #accessing }
 TPVideoNote >> thumb: anObject [
-	thumb := anObject
+	thumb := TPPhotoSize parse: anObject
 ]

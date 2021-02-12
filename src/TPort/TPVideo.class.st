@@ -22,7 +22,7 @@ TPVideo >> duration [
 
 { #category : #accessing }
 TPVideo >> duration: anObject [
-	duration := anObject
+	duration := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -32,7 +32,7 @@ TPVideo >> file_id [
 
 { #category : #accessing }
 TPVideo >> file_id: anObject [
-	file_id := anObject
+	file_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -42,7 +42,7 @@ TPVideo >> file_name [
 
 { #category : #accessing }
 TPVideo >> file_name: anObject [
-	file_name := anObject
+	file_name := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -52,7 +52,7 @@ TPVideo >> file_size [
 
 { #category : #accessing }
 TPVideo >> file_size: anObject [
-	file_size := anObject
+	file_size := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -62,7 +62,7 @@ TPVideo >> file_unique_id [
 
 { #category : #accessing }
 TPVideo >> file_unique_id: anObject [
-	file_unique_id := anObject
+	file_unique_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -72,7 +72,7 @@ TPVideo >> height [
 
 { #category : #accessing }
 TPVideo >> height: anObject [
-	height := anObject
+	height := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -82,7 +82,7 @@ TPVideo >> mime_type [
 
 { #category : #accessing }
 TPVideo >> mime_type: anObject [
-	mime_type := anObject
+	mime_type := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -92,7 +92,7 @@ TPVideo >> thumb [
 
 { #category : #accessing }
 TPVideo >> thumb: anObject [
-	thumb := anObject
+	thumb := TPPhotoSize parse: anObject
 ]
 
 { #category : #accessing }
@@ -102,5 +102,5 @@ TPVideo >> width [
 
 { #category : #accessing }
 TPVideo >> width: anObject [
-	width := anObject
+	width := (TPNotJson parse: anObject) asInteger
 ]

@@ -50,7 +50,7 @@ TPUser >> first_name [
 TPUser >> first_name: anObject [
 	"User's or bot's first name"
 	
-	first_name := TPNotJson parse: anObject
+	first_name := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -86,7 +86,7 @@ TPUser >> language_code [
 TPUser >> language_code: anObject [
 	"Optional. IETF language tag of the user's language"
 	
-	language_code := TPNotJson parse: anObject
+	language_code := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -98,7 +98,7 @@ TPUser >> last_name [
 TPUser >> last_name: anObject [
 	"Optional. User's or bot's last name"
 	
-	last_name := TPNotJson parse: anObject
+	last_name := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -123,5 +123,5 @@ TPUser >> username [
 TPUser >> username: anObject [
 	"Optional. User's or bot's username"
 	
-	username := TPNotJson parse: anObject
+	username := (TPNotJson parse: anObject) asString
 ]

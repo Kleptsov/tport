@@ -20,7 +20,7 @@ TPVenue >> address [
 
 { #category : #accessing }
 TPVenue >> address: anObject [
-	address := anObject
+	address := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -30,7 +30,7 @@ TPVenue >> foursquare_id [
 
 { #category : #accessing }
 TPVenue >> foursquare_id: anObject [
-	foursquare_id := anObject
+	foursquare_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -40,7 +40,7 @@ TPVenue >> foursquare_type [
 
 { #category : #accessing }
 TPVenue >> foursquare_type: anObject [
-	foursquare_type := anObject
+	foursquare_type := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -50,7 +50,7 @@ TPVenue >> google_place_id [
 
 { #category : #accessing }
 TPVenue >> google_place_id: anObject [
-	google_place_id := anObject
+	google_place_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -60,7 +60,7 @@ TPVenue >> google_place_type [
 
 { #category : #accessing }
 TPVenue >> google_place_type: anObject [
-	google_place_type := anObject
+	google_place_type := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -70,7 +70,7 @@ TPVenue >> location [
 
 { #category : #accessing }
 TPVenue >> location: anObject [
-	location := anObject
+	location := TPLocation parse: anObject
 ]
 
 { #category : #accessing }
@@ -80,5 +80,5 @@ TPVenue >> title [
 
 { #category : #accessing }
 TPVenue >> title: anObject [
-	title := anObject
+	title := (TPNotJson parse: anObject) asString
 ]

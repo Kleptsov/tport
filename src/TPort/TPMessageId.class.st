@@ -14,5 +14,5 @@ TPMessageId >> message_id [
 
 { #category : #accessing }
 TPMessageId >> message_id: anObject [
-	message_id := anObject
+	message_id := (TPNotJson parse: anObject) asInteger
 ]

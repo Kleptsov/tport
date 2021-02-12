@@ -15,7 +15,7 @@ TPChatLocation >> address [
 
 { #category : #accessing }
 TPChatLocation >> address: anObject [
-	address := anObject
+	address := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -25,5 +25,5 @@ TPChatLocation >> location [
 
 { #category : #accessing }
 TPChatLocation >> location: anObject [
-	location := anObject
+	location := TPLocation parse: anObject
 ]

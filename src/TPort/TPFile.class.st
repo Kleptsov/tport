@@ -37,7 +37,7 @@ TPFile >> file_size [
 
 { #category : #accessing }
 TPFile >> file_size: anObject [
-	file_size := anObject
+	file_size := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }

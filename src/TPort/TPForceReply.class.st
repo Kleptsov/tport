@@ -15,7 +15,7 @@ TPForceReply >> force_reply [
 
 { #category : #accessing }
 TPForceReply >> force_reply: anObject [
-	force_reply := anObject
+	force_reply := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -25,5 +25,5 @@ TPForceReply >> selective [
 
 { #category : #accessing }
 TPForceReply >> selective: anObject [
-	selective := anObject
+	selective := TPNotJson parse: anObject
 ]

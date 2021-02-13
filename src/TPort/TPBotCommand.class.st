@@ -15,7 +15,7 @@ TPBotCommand >> command [
 
 { #category : #accessing }
 TPBotCommand >> command: anObject [
-	command := anObject
+	command := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -25,5 +25,5 @@ TPBotCommand >> description [
 
 { #category : #accessing }
 TPBotCommand >> description: anObject [
-	description := anObject
+	description := (TPNotJson parse: anObject) asString
 ]

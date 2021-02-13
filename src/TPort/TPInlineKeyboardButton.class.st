@@ -41,7 +41,7 @@ TPInlineKeyboardButton >> login_url [
 
 { #category : #accessing }
 TPInlineKeyboardButton >> login_url: anObject [
-	login_url := (TPNotJson parse: anObject) asString
+	login_url := TPLoginUrl parse: anObject
 ]
 
 { #category : #accessing }

@@ -20,7 +20,7 @@ TPCallbackQuery >> chat_instance [
 
 { #category : #accessing }
 TPCallbackQuery >> chat_instance: anObject [
-	chat_instance := anObject
+	chat_instance := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -30,7 +30,7 @@ TPCallbackQuery >> data [
 
 { #category : #accessing }
 TPCallbackQuery >> data: anObject [
-	data := anObject
+	data := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -50,7 +50,7 @@ TPCallbackQuery >> game_short_name [
 
 { #category : #accessing }
 TPCallbackQuery >> game_short_name: anObject [
-	game_short_name := anObject
+	game_short_name := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -60,7 +60,7 @@ TPCallbackQuery >> id [
 
 { #category : #accessing }
 TPCallbackQuery >> id: anObject [
-	id := anObject
+	id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -70,7 +70,7 @@ TPCallbackQuery >> inline_message_id [
 
 { #category : #accessing }
 TPCallbackQuery >> inline_message_id: anObject [
-	inline_message_id := anObject
+	inline_message_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -80,5 +80,5 @@ TPCallbackQuery >> massage [
 
 { #category : #accessing }
 TPCallbackQuery >> massage: anObject [
-	massage := TPUser parse: anObject
+	massage := TPMessage parse: anObject
 ]

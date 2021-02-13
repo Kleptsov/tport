@@ -23,7 +23,7 @@ TPResponse >> description [
 
 { #category : #accessing }
 TPResponse >> description: anObject [
-	description := anObject
+	description := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -33,7 +33,7 @@ TPResponse >> error_code [
 
 { #category : #accessing }
 TPResponse >> error_code: anObject [
-	error_code := anObject
+	error_code := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -43,7 +43,7 @@ TPResponse >> ok [
 
 { #category : #accessing }
 TPResponse >> ok: anObject [
-	ok := anObject
+	ok := TPNotJson parse: anObject
 ]
 
 { #category : #parsing }
@@ -70,7 +70,7 @@ TPResponse >> result [
 { #category : #accessing }
 TPResponse >> result: anObject [
 	self responseType = TPNotJson
-		ifTrue: [ result := anObject ].
+		ifTrue: [ result := anObject. ^ self ].
 	anObject isDictionary
 		ifTrue: [ result := self responseType parse: anObject ]
 		ifFalse: [ 

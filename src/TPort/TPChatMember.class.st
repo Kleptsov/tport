@@ -33,7 +33,7 @@ TPChatMember >> can_add_web_page_previewes [
 
 { #category : #accessing }
 TPChatMember >> can_add_web_page_previewes: anObject [
-	can_add_web_page_previewes := anObject
+	can_add_web_page_previewes := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -43,7 +43,7 @@ TPChatMember >> can_be_edited [
 
 { #category : #accessing }
 TPChatMember >> can_be_edited: anObject [
-	can_be_edited := anObject
+	can_be_edited := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -53,7 +53,7 @@ TPChatMember >> can_change_info [
 
 { #category : #accessing }
 TPChatMember >> can_change_info: anObject [
-	can_change_info := anObject
+	can_change_info := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -63,7 +63,7 @@ TPChatMember >> can_delete_messages [
 
 { #category : #accessing }
 TPChatMember >> can_delete_messages: anObject [
-	can_delete_messages := anObject
+	can_delete_messages := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -73,7 +73,7 @@ TPChatMember >> can_edit_messages [
 
 { #category : #accessing }
 TPChatMember >> can_edit_messages: anObject [
-	can_edit_messages := anObject
+	can_edit_messages := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -83,7 +83,7 @@ TPChatMember >> can_invite_users [
 
 { #category : #accessing }
 TPChatMember >> can_invite_users: anObject [
-	can_invite_users := anObject
+	can_invite_users := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -93,7 +93,7 @@ TPChatMember >> can_pin_messages [
 
 { #category : #accessing }
 TPChatMember >> can_pin_messages: anObject [
-	can_pin_messages := anObject
+	can_pin_messages := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -103,7 +103,7 @@ TPChatMember >> can_post_message [
 
 { #category : #accessing }
 TPChatMember >> can_post_message: anObject [
-	can_post_message := anObject
+	can_post_message := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -113,7 +113,7 @@ TPChatMember >> can_promote_members [
 
 { #category : #accessing }
 TPChatMember >> can_promote_members: anObject [
-	can_promote_members := anObject
+	can_promote_members := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -123,7 +123,7 @@ TPChatMember >> can_restrict_members [
 
 { #category : #accessing }
 TPChatMember >> can_restrict_members: anObject [
-	can_restrict_members := anObject
+	can_restrict_members := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -133,7 +133,7 @@ TPChatMember >> can_send_media_messages [
 
 { #category : #accessing }
 TPChatMember >> can_send_media_messages: anObject [
-	can_send_media_messages := anObject
+	can_send_media_messages := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -143,7 +143,7 @@ TPChatMember >> can_send_messages [
 
 { #category : #accessing }
 TPChatMember >> can_send_messages: anObject [
-	can_send_messages := anObject
+	can_send_messages := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -153,7 +153,7 @@ TPChatMember >> can_send_other_messages [
 
 { #category : #accessing }
 TPChatMember >> can_send_other_messages: anObject [
-	can_send_other_messages := anObject
+	can_send_other_messages := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -163,7 +163,7 @@ TPChatMember >> can_send_polls [
 
 { #category : #accessing }
 TPChatMember >> can_send_polls: anObject [
-	can_send_polls := anObject
+	can_send_polls := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -173,7 +173,7 @@ TPChatMember >> custom_title [
 
 { #category : #accessing }
 TPChatMember >> custom_title: anObject [
-	custom_title := anObject
+	custom_title := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -183,7 +183,7 @@ TPChatMember >> is_anonymous [
 
 { #category : #accessing }
 TPChatMember >> is_anonymous: anObject [
-	is_anonymous := anObject
+	is_anonymous := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -193,7 +193,7 @@ TPChatMember >> is_member [
 
 { #category : #accessing }
 TPChatMember >> is_member: anObject [
-	is_member := anObject
+	is_member := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -203,7 +203,7 @@ TPChatMember >> status [
 
 { #category : #accessing }
 TPChatMember >> status: anObject [
-	status := anObject
+	status := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -213,7 +213,7 @@ TPChatMember >> until_date [
 
 { #category : #accessing }
 TPChatMember >> until_date: anObject [
-	until_date := anObject
+	until_date := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -223,5 +223,5 @@ TPChatMember >> user [
 
 { #category : #accessing }
 TPChatMember >> user: anObject [
-	user := anObject
+	user := TPUser parse: anObject
 ]

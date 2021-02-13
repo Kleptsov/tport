@@ -17,7 +17,7 @@ TPLoginUrl >> bot_username [
 
 { #category : #accessing }
 TPLoginUrl >> bot_username: anObject [
-	bot_username := anObject
+	bot_username := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -27,7 +27,7 @@ TPLoginUrl >> forward_text [
 
 { #category : #accessing }
 TPLoginUrl >> forward_text: anObject [
-	forward_text := anObject
+	forward_text := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -37,7 +37,7 @@ TPLoginUrl >> request_write_access [
 
 { #category : #accessing }
 TPLoginUrl >> request_write_access: anObject [
-	request_write_access := anObject
+	request_write_access := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -47,5 +47,5 @@ TPLoginUrl >> url [
 
 { #category : #accessing }
 TPLoginUrl >> url: anObject [
-	url := anObject
+	url := (TPNotJson parse: anObject) asString
 ]

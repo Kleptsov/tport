@@ -18,7 +18,7 @@ TPContact >> first_name [
 
 { #category : #accessing }
 TPContact >> first_name: anObject [
-	first_name := anObject
+	first_name := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -28,7 +28,7 @@ TPContact >> last_name [
 
 { #category : #accessing }
 TPContact >> last_name: anObject [
-	last_name := anObject
+	last_name := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -38,7 +38,7 @@ TPContact >> phone_number [
 
 { #category : #accessing }
 TPContact >> phone_number: anObject [
-	phone_number := anObject
+	phone_number := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -48,7 +48,7 @@ TPContact >> user_id [
 
 { #category : #accessing }
 TPContact >> user_id: anObject [
-	user_id := anObject
+	user_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -58,5 +58,5 @@ TPContact >> vcard [
 
 { #category : #accessing }
 TPContact >> vcard: anObject [
-	vcard := anObject
+	vcard := (TPNotJson parse: anObject) asString
 ]

@@ -15,7 +15,8 @@ TPUserProfilePhotos >> photos [
 
 { #category : #accessing }
 TPUserProfilePhotos >> photos: anObject [
-	photos := anObject
+	photos := anObject collect: [ :el|
+		el collect: [ :el2| TPPhotoSize parse: el2 ] ]
 ]
 
 { #category : #accessing }

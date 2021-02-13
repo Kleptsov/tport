@@ -15,7 +15,7 @@ TPReplyKeyboardRemove >> remove_keyboard [
 
 { #category : #accessing }
 TPReplyKeyboardRemove >> remove_keyboard: anObject [
-	remove_keyboard := anObject
+	remove_keyboard := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -25,5 +25,5 @@ TPReplyKeyboardRemove >> selective [
 
 { #category : #accessing }
 TPReplyKeyboardRemove >> selective: anObject [
-	selective := anObject
+	selective := TPNotJson parse: anObject
 ]

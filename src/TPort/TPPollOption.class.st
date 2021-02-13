@@ -15,7 +15,7 @@ TPPollOption >> text [
 
 { #category : #accessing }
 TPPollOption >> text: anObject [
-	text := anObject
+	text := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -25,5 +25,5 @@ TPPollOption >> voter_count [
 
 { #category : #accessing }
 TPPollOption >> voter_count: anObject [
-	voter_count := anObject
+	voter_count := (TPNotJson parse: anObject) asInteger
 ]

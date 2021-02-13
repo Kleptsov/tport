@@ -16,7 +16,7 @@ TPProximityAlertTriggered >> distance [
 
 { #category : #accessing }
 TPProximityAlertTriggered >> distance: anObject [
-	distance := anObject
+	distance := (TPNotJson parse: anObject) asInteger
 ]
 
 { #category : #accessing }
@@ -26,7 +26,7 @@ TPProximityAlertTriggered >> travaler [
 
 { #category : #accessing }
 TPProximityAlertTriggered >> travaler: anObject [
-	travaler := anObject
+	travaler := TPUser parse: anObject
 ]
 
 { #category : #accessing }
@@ -36,5 +36,5 @@ TPProximityAlertTriggered >> watcher [
 
 { #category : #accessing }
 TPProximityAlertTriggered >> watcher: anObject [
-	watcher := anObject
+	watcher := TPUser parse: anObject
 ]

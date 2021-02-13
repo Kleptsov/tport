@@ -15,15 +15,15 @@ TPDice >> emoji [
 
 { #category : #accessing }
 TPDice >> emoji: anObject [
-	emoji := anObject
+	emoji := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
-TPDice >> value1 [
+TPDice >> value [
 	^ value
 ]
 
 { #category : #accessing }
 TPDice >> value: anObject [
-	value := anObject
+	value := (TPNotJson parse: anObject) asInteger
 ]

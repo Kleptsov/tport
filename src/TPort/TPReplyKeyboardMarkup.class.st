@@ -27,7 +27,8 @@ TPReplyKeyboardMarkup >> keyboard [
 
 { #category : #accessing }
 TPReplyKeyboardMarkup >> keyboard: anObject [
-	keyboard := anObject
+	keyboard := anObject collect: [ :el|
+		el collect: [ :el2| TPKeyboardButton parse: el2 ] ]
 ]
 
 { #category : #accessing }
@@ -37,7 +38,7 @@ TPReplyKeyboardMarkup >> one_time_keyboard [
 
 { #category : #accessing }
 TPReplyKeyboardMarkup >> one_time_keyboard: anObject [
-	one_time_keyboard := anObject
+	one_time_keyboard := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -47,7 +48,7 @@ TPReplyKeyboardMarkup >> resize_keyboard [
 
 { #category : #accessing }
 TPReplyKeyboardMarkup >> resize_keyboard: anObject [
-	resize_keyboard := anObject
+	resize_keyboard := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -57,5 +58,5 @@ TPReplyKeyboardMarkup >> selective [
 
 { #category : #accessing }
 TPReplyKeyboardMarkup >> selective: anObject [
-	selective := anObject
+	selective := TPNotJson parse: anObject
 ]

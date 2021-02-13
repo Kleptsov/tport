@@ -17,7 +17,7 @@ TPFile >> file_id [
 
 { #category : #accessing }
 TPFile >> file_id: anObject [
-	file_id := anObject
+	file_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -27,7 +27,7 @@ TPFile >> file_path [
 
 { #category : #accessing }
 TPFile >> file_path: anObject [
-	file_path := anObject
+	file_path := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -47,5 +47,5 @@ TPFile >> file_unique_id [
 
 { #category : #accessing }
 TPFile >> file_unique_id: anObject [
-	file_unique_id := anObject
+	file_unique_id := (TPNotJson parse: anObject) asString
 ]

@@ -21,7 +21,7 @@ TPInlineKeyboardButton >> callback_data [
 
 { #category : #accessing }
 TPInlineKeyboardButton >> callback_data: anObject [
-	callback_data := anObject
+	callback_data := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -31,7 +31,7 @@ TPInlineKeyboardButton >> callback_game [
 
 { #category : #accessing }
 TPInlineKeyboardButton >> callback_game: anObject [
-	callback_game := anObject
+	callback_game := TPCallbackGame parse: anObject
 ]
 
 { #category : #accessing }
@@ -41,7 +41,7 @@ TPInlineKeyboardButton >> login_url [
 
 { #category : #accessing }
 TPInlineKeyboardButton >> login_url: anObject [
-	login_url := anObject
+	login_url := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -51,7 +51,7 @@ TPInlineKeyboardButton >> pay [
 
 { #category : #accessing }
 TPInlineKeyboardButton >> pay: anObject [
-	pay := anObject
+	pay := TPNotJson parse: anObject
 ]
 
 { #category : #accessing }
@@ -61,7 +61,7 @@ TPInlineKeyboardButton >> switch_inline_query [
 
 { #category : #accessing }
 TPInlineKeyboardButton >> switch_inline_query: anObject [
-	switch_inline_query := anObject
+	switch_inline_query := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -71,7 +71,7 @@ TPInlineKeyboardButton >> switch_inline_query_current_chat [
 
 { #category : #accessing }
 TPInlineKeyboardButton >> switch_inline_query_current_chat: anObject [
-	switch_inline_query_current_chat := anObject
+	switch_inline_query_current_chat := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -81,7 +81,7 @@ TPInlineKeyboardButton >> text [
 
 { #category : #accessing }
 TPInlineKeyboardButton >> text: anObject [
-	text := anObject
+	text := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -91,5 +91,5 @@ TPInlineKeyboardButton >> url [
 
 { #category : #accessing }
 TPInlineKeyboardButton >> url: anObject [
-	url := anObject
+	url := (TPNotJson parse: anObject) asString
 ]

@@ -14,5 +14,5 @@ TPKeyboardButtonPollType >> type [
 
 { #category : #accessing }
 TPKeyboardButtonPollType >> type: anObject [
-	type := anObject
+	type := (TPNotJson parse: anObject) asString
 ]

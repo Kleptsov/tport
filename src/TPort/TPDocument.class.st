@@ -19,7 +19,7 @@ TPDocument >> file_id [
 
 { #category : #accessing }
 TPDocument >> file_id: anObject [
-	file_id := anObject
+	file_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -29,7 +29,7 @@ TPDocument >> file_name [
 
 { #category : #accessing }
 TPDocument >> file_name: anObject [
-	file_name := anObject
+	file_name := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -49,7 +49,7 @@ TPDocument >> file_unique_id [
 
 { #category : #accessing }
 TPDocument >> file_unique_id: anObject [
-	file_unique_id := anObject
+	file_unique_id := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -59,7 +59,7 @@ TPDocument >> mime_type [
 
 { #category : #accessing }
 TPDocument >> mime_type: anObject [
-	mime_type := anObject
+	mime_type := (TPNotJson parse: anObject) asString
 ]
 
 { #category : #accessing }
@@ -69,5 +69,5 @@ TPDocument >> thumb [
 
 { #category : #accessing }
 TPDocument >> thumb: anObject [
-	thumb := anObject
+	thumb := TPPhotoSize parse: anObject
 ]
